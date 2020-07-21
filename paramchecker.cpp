@@ -3,9 +3,9 @@ bool checkVitals(float vital, int lower, int upper)
 {
   if(vital <lower || vital >upper)
   {
-    return 1;
+    return 0;
   }
-  return 0;
+  return 1;
 }
 
 bool vitalsAreOk(float bpm, float spo2, float respRate) 
