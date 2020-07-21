@@ -13,7 +13,8 @@ bool vitalsAreOk(float bpm, float spo2, float respRate)
   bool isBpmOk = checkVitals(bpm,70,150);
   bool isSpo2Ok = checkVitals(spo2,80,100);
   bool isrespRateOk = checkVitals(respRate,30,60);
-  if(isBpmOk && isSpo2Ok && isrespRateOk)
+  bool result = isBpmOk & isSpo2Ok & isrespRateOk;
+  if(result)
   {
     return true;
   }
