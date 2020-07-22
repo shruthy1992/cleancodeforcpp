@@ -6,7 +6,7 @@ TEST(VitalsTest, BPM) {
     vitals.pushback(100);
      vitals.pushback(100);
      vitals.pushback(50);
-    ASSERT_EQ(true, vitalsAreOk(vitals));
+    ASSERT_EQ(true, vitalsAreOk(vitals,70,150));
 }
  
 TEST(VitalsTest, SPO2) {
@@ -14,7 +14,7 @@ TEST(VitalsTest, SPO2) {
     vitals.pushback(100);
      vitals.pushback(40);
      vitals.pushback(50);
-    ASSERT_EQ(false, vitalsAreOk(100, 40, 50));
+    ASSERT_EQ(false, vitalsAreOk(vitals,80,100));
 }
  
 int main(int argc, char **argv) {
