@@ -1,3 +1,4 @@
+#include <vector>
 
 struct Vital
 {
@@ -6,5 +7,5 @@ struct Vital
   float lower;
 };
 
-bool vitalsAreOk(vector<Vital>& vitalVec);
+bool vitalsAreOk(vector<Vital> vitalVec);
 
