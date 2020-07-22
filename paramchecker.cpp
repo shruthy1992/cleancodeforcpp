@@ -8,17 +8,13 @@ bool checkVitals(float vital,int upper,int lower)
   return 1;
 }
 
-bool vitalsAreOk(vector<float>& vitals,int upperLimit,int lowerlimit) 
-{  int i=0;
-   int result=0;
-   int isVitals = 1;
-  for(i=0;i<vitals.size();i++)
-  { 
-   result= checkVitals(vital[i],upperLimit,lowerlimit);
-   isVitals = isVitals & result;  
-  }
-  
-  if((isVitals)== 1)
+bool vitalsAreOk(float bpm,flaot spo2,float respRate) 
+{  
+  int isBpmOk = checkVitals(bpm,70,150);
+  int isSpo2Ok =checkVitals(spo2,80,100);
+  int isRespRateOk =checkVitals(respRate,30,60);
+
+  if((isBpmOk & isSpo2Ok & isRespRateOk)== 1)
   {
     return true;
   }
