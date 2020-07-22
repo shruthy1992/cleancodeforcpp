@@ -1,7 +1,5 @@
 #include "paramchecker.h"
 #include <gtest/gtest.h>
-
-TEST(VitalsTest, BPM) {
     vital.vitalValue =100;
     vital.lower = 70;
     vital.upper = 150;
@@ -14,10 +12,9 @@ TEST(VitalsTest, BPM) {
     vital.lower = 30;
     vital.upper = 60;
     vitals.pushback(vital)
+TEST(VitalsTest, BPM) {
     ASSERT_EQ(true, vitalsAreOk(vital));
 }
-
-TEST(VitalsTest, SPO2) {
     vital.bpm =100;
     vital.lower = 70;
     vital.upper = 150;
@@ -30,6 +27,7 @@ TEST(VitalsTest, SPO2) {
     vital.lower = 30;
     vital.upper = 60;
     vitals.pushback(vital)
+TEST(VitalsTest, SPO2) {
     ASSERT_EQ(false, vitalsAreOk(vital));
 }
 
