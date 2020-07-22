@@ -20,7 +20,7 @@ Vital vitalsAreOk(std::vector<VitalValues>& vitalVec)
    notOkIndex = i;
   }
  }
-  if(index == 99)
+  if(notOkIndex  == 99)
   {
     return Vital::None;
   }
