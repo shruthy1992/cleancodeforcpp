@@ -1,5 +1,7 @@
 #include "paramchecker.h"
 #include <gtest/gtest.h>
+Vital vital;
+vector<Vital> vitals;
     vital.vitalValue =100;
     vital.lower = 70;
     vital.upper = 150;
