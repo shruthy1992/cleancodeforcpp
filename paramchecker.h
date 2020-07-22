@@ -1,3 +1,3 @@
 
-bool vitalsAreOk(vector<float>& vitals);
+bool vitalsAreOk(float bpm, float spo2, float respRate);
 
