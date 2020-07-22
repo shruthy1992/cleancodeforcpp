@@ -11,14 +11,14 @@ bool checkVitals(float vital,int lower,int upper)
 
 Vital vitalsAreOk(std::vector<VitalValues>& vitalVec) 
 {  
-  Vital isOk = Vital::None;
+  Vital vi = Vital::None;
  for(int i=0;i<vitalVec.size();i++)
  {
   vitalVec[i].vitalStatus = checkVitals(vitalVec[i].vitalValue, vitalVec[i].lower,vitalVec[i].upper);
   if(vitalVec[i].vitalStatus == false)
   {
-   isOk = vitalVec[i].vitalType;
+   vi = vitalVec[i].vitalType;
   }
  }
-  return isOk;
+  return vi;
 }
