@@ -20,7 +20,7 @@ Vital vitalsAreOk(std::vector<VitalValues>& vitalVec)
   vitalVec[i].vitalStatus= vitalState;
   if(vitalState == false)
   {
-   vitalEnum =  vitalVec[i].vitalType;
+   vitalEnum =  vitalVec[0].vitalType;
   }
  }
   return vitalEnum;
