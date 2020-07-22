@@ -3,11 +3,11 @@
 
 TEST(VitalsTest1, BPM) {
     std::vector<VitalValues> vitalVector = {{Vital::Bpm, 100,70, 150}, {Vital::Spo2, 90,80, 100}, {Vital::RespRate, 50,30, 60},{Vital::SugarLevel, 110,90, 120}};
-    ASSERT_EQ(true, vitalsAreOk(vitalVector));
+    ASSERT_EQ(Vital::None, vitalsAreOk(vitalVector));
 }
 TEST(VitalsTest2, SPO2) {
     std::vector<VitalValues> vitalVector = {{Vital::Bpm, 100,70, 150}, {Vital::Spo2, 40,80, 100}, {Vital::RespRate, 50,30, 60},{Vital::SugarLevel, 110,90, 120}};
-    ASSERT_EQ(false, vitalsAreOk(vitalVector));
+    ASSERT_EQ(Vital::Spo2, vitalsAreOk(vitalVector));
 }
 
 int main(int argc, char **argv) {
