@@ -6,7 +6,7 @@ TEST(VitalsTest1, BPM) {
     ASSERT_EQ(true,vitalsAreOk(vitalVector));
     for(int i=0;i<vitalVector.size();i++)
     {
-    TEST_OUT<<"Vital status:"<<vitalVector[i].vitalType<<":"<<vitalVector[i].vitalStatus<<"\n";
+    std::cout<<"Vital status:"<<vitalVector[i].vitalType<<":"<<vitalVector[i].vitalStatus<<"\n";
     }
 }
 TEST(VitalsTest2, SPO2) {
