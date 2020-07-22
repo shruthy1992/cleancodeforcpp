@@ -13,10 +13,10 @@ struct VitalValues
 {
   Vital vitalType;
   float vitalValue;
+  bool vitalStatus;
   float lower;
   float upper;
-  bool vitalStatus;
 };
 
-bool vitalsAreOk(std::vector<VitalValues>& vitalVector);
+Vital vitalsAreOk(std::vector<VitalValues>& vitalVector);
 
