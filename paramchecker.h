@@ -4,7 +4,8 @@
 enum Vital{
   Bpm,
   Spo2,
-  RespRate
+  RespRate,
+  SugarLevel
 };
 
 struct VitalValues
