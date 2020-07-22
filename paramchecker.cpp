@@ -17,7 +17,7 @@ Vital vitalsAreOk(std::vector<VitalValues>& vitalVec)
   vitalVec[i].vitalStatus = checkVitals(vitalVec[i].vitalValue, vitalVec[i].lower,vitalVec[i].upper);
   if(vitalVec[i].vitalStatus == false)
   {
-   isOk = vitalVec[i].vitalStatus;
+   isOk = vitalVec[i].vitalType;
   }
  }
   return isOk;
