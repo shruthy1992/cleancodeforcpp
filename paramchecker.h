@@ -5,7 +5,8 @@ enum Vital{
   Bpm,
   Spo2,
   RespRate,
-  SugarLevel
+  SugarLevel,
+  None
 };
 
 struct VitalValues
@@ -16,5 +17,5 @@ struct VitalValues
   float upper;
 };
 
-bool vitalsAreOk(std::vector<VitalValues> vitalVector);
+Vital vitalsAreOk(std::vector<VitalValues> vitalVector);
 
