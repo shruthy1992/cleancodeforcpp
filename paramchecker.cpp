@@ -4,9 +4,9 @@ bool checkVitals(float vital,int lower,int upper)
 {
   if(vital <lower || vital >upper)
   {
-    return 0;
+    return false;
   }
-  return 1;
+  return true;
 }
 
 Vital vitalsAreOk(std::vector<VitalValues>& vitalVec) 
