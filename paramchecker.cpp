@@ -20,5 +20,5 @@ Vital vitalsAreOk(std::vector<VitalValues>& vitalVec)
    vi = vitalVec[i].vitalType;
   }
  }
-  return vi;
+  return Vital::None;
 }
