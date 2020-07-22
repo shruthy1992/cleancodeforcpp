@@ -20,9 +20,6 @@ Vital vitalsAreOk(std::vector<VitalValues>& vitalVec)
    notOkIndex = i;
   }
  }
-  if(notOkIndex  == 99)
-  {
-    return Vital::None;
-  }
-  return vitalVec[notOkIndex].vitalType;
+ 
+  return((notOkIndex == 99) ? Vital::None : vitalVec[notOkIndex].vitalType);
 }
