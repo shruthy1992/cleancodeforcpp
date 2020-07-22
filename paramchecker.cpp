@@ -5,7 +5,9 @@ bool checkVitals(float vital,int upper,int lower)
   if(vital <lower || vital >upper)
   {
     return 0;
+printf("returning 0\n");
   }
+  printf("returning 1\n");
   return 1;
 }
 
