@@ -1,3 +1,11 @@
 
-bool vitalsAreOk(float bpm, float spo2, float respRate);
+struct Vital
+{
+  float vitalValue;
+  float upper;
+  float lower;
+}vital;
+
+vector<Vital> vitals;
+bool vitalsAreOk(vector<Vital>& vitalVec);
 
