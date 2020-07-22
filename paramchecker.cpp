@@ -1,3 +1,5 @@
+#include "paramchecker.h"
+
 bool checkVitals(float vital,int upper,int lower)
 {
   if(vital <lower || vital >upper)
