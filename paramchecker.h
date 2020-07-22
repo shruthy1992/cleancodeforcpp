@@ -11,8 +11,8 @@ struct VitalValues
 {
   Vital vitalType;
   float vitalValue;
-  float upper;
   float lower;
+  float upper;
 };
 
 bool vitalsAreOk(std::vector<VitalValues> vitalVector);
