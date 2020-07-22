@@ -14,7 +14,7 @@ bool vitalsAreOk(std::vector<VitalValues> vitalVec)
   int i;
  for(i=0;i<vitalVec.size();i++)
  {
-  int isOk = checkVitals(vitalVec[i].vitalValue, vitalVec[i].upper, vitalVec[i].lower]);
+  int isOk = checkVitals(vitalVec[i].vitalValue, vitalVec[i].upper, vitalVec[i].lower);
    if(isOk == 0)
    {
      return false;
