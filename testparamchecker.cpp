@@ -1,39 +1,13 @@
 #include "paramchecker.h"
 #include <gtest/gtest.h>
 
-Vital vital;
-vector<Vital> vitals;
-
-    vital.vitalValue =100;
-    vital.lower = 70;
-    vital.upper = 150;
-    vitals.pushback(vital);
-    vital.vitalValue =100;
-    vital.lower = 80;
-    vital.upper = 100;
-    vitals.pushback(vital);
-    vital.vitalValue = 80;
-    vital.lower = 30;
-    vital.upper = 60;
-    vitals.pushback(vital);
-
 TEST(VitalsTest, BPM) {
+    std::vector<VitalValues> vitalVector = {{Vital::Bpm, 100,70, 150}, {Vital::SpO2, 100,80, 101}, {Vital::RespRate, 50,30, 60}};
     ASSERT_EQ(true, vitalsAreOk(vitals));
 }
-    vital.bpm =100;
-    vital.lower = 70;
-    vital.upper = 150;
-    vitals.pushback(vital);
-    vital.spo2 =40;
-    vital.lower = 80;
-    vital.upper = 100;
-    vitals.pushback(vital);
-    vital.resprate = 50;
-    vital.lower = 30;
-    vital.upper = 60;
-    vitals.pushback(vital);
 TEST(VitalsTest, SPO2) {
-    ASSERT_EQ(false, vitalsAreOk(vitals));
+    std::vector<VitalValues> vitalVector = {{Vital::Bpm, 100,70, 150}, {Vital::SpO2, 40,80, 101}, {Vital::RespRate, 50,30, 60}};
+    ASSERT_EQ(false, vitalsAreOk(vitalVector));
 }
 
 int main(int argc, char **argv) {
