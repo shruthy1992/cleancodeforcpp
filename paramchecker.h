@@ -18,5 +18,5 @@ struct VitalValues
   bool vitalStatus;
 };
 
-void vitalsAreOk(std::vector<VitalValues>& vitalVector);
+bool vitalsAreOk(std::vector<VitalValues>& vitalVector);
 
