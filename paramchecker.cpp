@@ -7,7 +7,7 @@ bool checkVitals(float vital,int upper,int lower)
   return 1;
 }
 
-bool vitalsAreOk(vector<Vital> vitalVec) 
+bool vitalsAreOk(std::vector<VitalValues> vitalVec) 
 {  
   int i;
  for(i=0;i<vitalVec.size();i++)
